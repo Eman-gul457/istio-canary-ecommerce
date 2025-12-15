@@ -8,12 +8,15 @@ The goal is to show how traffic can be gradually shifted between application ver
 ---
 🧰 Tech Stack
 ---
-•Kubernetes (Kind)
-•Istio Service Mesh
-•Docker
-•Node.js
-•Git & GitHub
-•Linux (Kali)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-Orchestration-blue?logo=kubernetes&logoColor=white)
+![Istio](https://img.shields.io/badge/Istio-Service_Mesh-purple?logo=istio&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Containerization-blue?logo=docker&logoColor=white)
+![Kind](https://img.shields.io/badge/Kind-Kubernetes_in_Docker-lightblue?logo=docker&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-Backend-green?logo=node.js&logoColor=white)
+![Git](https://img.shields.io/badge/Git-Version_Control-orange?logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-Kali_OS-black?logo=linux&logoColor=white)
+
 
 ---
 📁 Step 1: Create Project Directory
@@ -186,3 +189,9 @@ Canary deployments are a core DevOps & SRE practice.
 •Kubernetes production workflows
 
 ---
+🎯 Summary
+---
+This project demonstrates a Canary Deployment strategy using Kubernetes (Kind) and Istio Service Mesh for a Node.js-based e-commerce application.
+Two application versions are deployed, and traffic is intelligently split between them using Istio routing rules.
+The setup shows how new releases can be tested safely with controlled traffic shifting and zero downtime.
+All components are deployed locally without any cloud provider, following real-world DevOps practices.
