@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecommerce-v2
+  namespace: canary-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ecommerce
+      version: v2
+  template:
+    metadata:
+      labels:
+        app: ecommerce
+        version: v2
+    spec:
+      containers:
+      - name: ecommerce
+        image: canary-app:v2
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
+

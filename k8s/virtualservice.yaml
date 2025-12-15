@@ -1,0 +1,20 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: ecommerce
+  namespace: canary-app
+spec:
+  hosts:
+  - "*"
+  gateways:               # 🔑 THIS WAS MISSING
+  - ecommerce-gateway
+  http:
+  - route:
+    - destination:
+        host: ecommerce
+        subset: v1
+      weight: 50
+    - destination:
+        host: ecommerce
+        subset: v2
+      weight: 50
